@@ -1,0 +1,17 @@
+{
+	"name": "ls_adlstosqldb",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureSqlDatabase",
+		"typeProperties": {
+			"server": "aetasqlserver.database.windows.net",
+			"database": "Aetdatabase",
+			"encrypt": "mandatory",
+			"trustServerCertificate": false,
+			"authenticationType": "SQL",
+			"userName": "aetazureadmin",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQDhDOThGN0MzLUZBNEQtNDVFOS1BMDMzLTI1RjE2QzVCRTM5OF9hNGJkNTU4Ny1kOGUzLTQ2OWUtODI2YS02NmZjNzg4YTdjYWEiDQp9"
+		}
+	}
+}

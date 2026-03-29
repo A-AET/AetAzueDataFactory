@@ -1,0 +1,17 @@
+{
+	"name": "ds_keyva",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "sqllinkskv2",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "orderkvtest"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

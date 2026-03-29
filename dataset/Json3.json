@@ -1,0 +1,43 @@
+{
+	"name": "Json3",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_ADF",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "OrdersNew.json",
+				"folderPath": "Techdrive",
+				"fileSystem": "aetcontainer"
+			}
+		},
+		"schema": {
+			"type": "object",
+			"properties": {
+				"OrderDate": {
+					"type": "string"
+				},
+				"ProductKey": {
+					"type": "string"
+				},
+				"Country": {
+					"type": "string"
+				},
+				"EnglishProductName": {
+					"type": "string"
+				},
+				"SalesAmount": {
+					"type": "string"
+				},
+				"TaxAmt": {
+					"type": "string"
+				}
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

@@ -1,0 +1,17 @@
+{
+	"name": "sql_oredrmig",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_adlstosqldb",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "ordermigr"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

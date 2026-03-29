@@ -1,0 +1,17 @@
+{
+	"name": "ifexistcsvtosql",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_adlstosqldb",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "ifexistcsvtosql"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

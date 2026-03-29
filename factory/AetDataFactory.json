@@ -1,0 +1,9 @@
+{
+	"name": "AetDataFactory",
+	"location": "westus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "a5255d56-52bc-45f3-ac83-7eb246b3240a",
+		"tenantId": "6d90b9b9-d347-429b-8f98-c9da47474817"
+	}
+}

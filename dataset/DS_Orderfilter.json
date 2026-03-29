@@ -1,0 +1,17 @@
+{
+	"name": "DS_Orderfilter",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_adlstosqldb",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "orderfilter"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

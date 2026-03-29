@@ -1,0 +1,66 @@
+{
+	"name": "insurancecsv",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_ADF",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "Insurance Policies Data.csv",
+				"folderPath": "Techdrive",
+				"fileSystem": "aetcontainer"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "Policy",
+				"type": "String"
+			},
+			{
+				"name": "Expiry",
+				"type": "String"
+			},
+			{
+				"name": "Location",
+				"type": "String"
+			},
+			{
+				"name": "State",
+				"type": "String"
+			},
+			{
+				"name": "Region",
+				"type": "String"
+			},
+			{
+				"name": "InsuredValue",
+				"type": "String"
+			},
+			{
+				"name": "Construction",
+				"type": "String"
+			},
+			{
+				"name": "BusinessType",
+				"type": "String"
+			},
+			{
+				"name": "Earthquake",
+				"type": "String"
+			},
+			{
+				"name": "Flood",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

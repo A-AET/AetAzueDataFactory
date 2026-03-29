@@ -1,0 +1,74 @@
+{
+	"name": "dataflowsplit",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "ReadCsvordernew",
+						"type": "DatasetReference"
+					},
+					"name": "Readcsv"
+				}
+			],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "sqlsplitfrance",
+						"type": "DatasetReference"
+					},
+					"name": "france"
+				},
+				{
+					"dataset": {
+						"referenceName": "ds_ordersplitindian",
+						"type": "DatasetReference"
+					},
+					"name": "indian"
+				}
+			],
+			"transformations": [
+				{
+					"name": "split1"
+				}
+			],
+			"scriptLines": [
+				"source(output(",
+				"          OrderDate as string,",
+				"          ProductKey as string,",
+				"          Country as string,",
+				"          EnglishProductName as string,",
+				"          SalesAmount as string,",
+				"          TaxAmt as string",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> Readcsv",
+				"Readcsv split(Country == 'France',",
+				"     Country == 'Indian',",
+				"     disjoint: false) ~> split1@(France, Indian)",
+				"split1@France sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     deletable:false,",
+				"     insertable:true,",
+				"     updateable:false,",
+				"     upsertable:false,",
+				"     format: 'table',",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true,",
+				"     errorHandlingOption: 'stopOnFirstError') ~> france",
+				"split1@Indian sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     deletable:false,",
+				"     insertable:true,",
+				"     updateable:false,",
+				"     upsertable:false,",
+				"     format: 'table',",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true,",
+				"     errorHandlingOption: 'stopOnFirstError') ~> indian"
+			]
+		}
+	}
+}

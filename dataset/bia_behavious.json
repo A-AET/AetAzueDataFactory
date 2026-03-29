@@ -1,0 +1,19 @@
+{
+	"name": "bia_behavious",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_ADF",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "CB/output",
+				"fileSystem": "aetcontainer"
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

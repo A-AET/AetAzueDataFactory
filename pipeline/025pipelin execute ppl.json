@@ -1,0 +1,26 @@
+{
+	"name": "025pipelin execute ppl",
+	"properties": {
+		"activities": [
+			{
+				"name": "Execute Pipeline1",
+				"type": "ExecutePipeline",
+				"dependsOn": [],
+				"policy": {
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "007pipeline copy file in timeframe",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true
+				}
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2026-02-09T19:37:56Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

@@ -1,0 +1,67 @@
+{
+	"name": "DS_Orders",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_adlstosqldb",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "Orderdate",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "ProductKey",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Country",
+				"type": "varchar"
+			},
+			{
+				"name": "EnglishProductName",
+				"type": "varchar"
+			},
+			{
+				"name": "SalesAmount",
+				"type": "money",
+				"precision": 19,
+				"scale": 4
+			},
+			{
+				"name": "TaxAmt",
+				"type": "money",
+				"precision": 19,
+				"scale": 4
+			},
+			{
+				"name": "OrderQuantity",
+				"type": "money",
+				"precision": 19,
+				"scale": 4
+			},
+			{
+				"name": "UnitPrice",
+				"type": "money",
+				"precision": 19,
+				"scale": 4
+			},
+			{
+				"name": "TotalProductCost",
+				"type": "money",
+				"precision": 19,
+				"scale": 4
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "Orders"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

@@ -1,0 +1,85 @@
+{
+	"name": "006pipelvariable",
+	"properties": {
+		"activities": [
+			{
+				"name": "x",
+				"description": "okeho",
+				"type": "SetVariable",
+				"dependsOn": [],
+				"policy": {
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "x",
+					"value": "Okeho"
+				}
+			},
+			{
+				"name": "Set variable1",
+				"type": "SetVariable",
+				"dependsOn": [
+					{
+						"activity": "x",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "y",
+					"value": 100
+				}
+			},
+			{
+				"name": "Set variable2",
+				"type": "SetVariable",
+				"dependsOn": [
+					{
+						"activity": "Set variable1",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "y",
+					"value": 800
+				}
+			}
+		],
+		"variables": {
+			"x": {
+				"type": "String",
+				"defaultValue": "xyx"
+			},
+			"y": {
+				"type": "Integer",
+				"defaultValue": 100
+			},
+			"R": {
+				"type": "Integer",
+				"defaultValue": 100
+			},
+			"T": {
+				"type": "String",
+				"defaultValue": "RTT"
+			}
+		},
+		"annotations": [],
+		"lastPublishTime": "2026-02-01T09:04:50Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

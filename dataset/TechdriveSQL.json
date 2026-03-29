@@ -1,0 +1,17 @@
+{
+	"name": "TechdriveSQL",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_adlstosqldb",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "InsurancePolicyData"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

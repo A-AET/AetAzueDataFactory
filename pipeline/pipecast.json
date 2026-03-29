@@ -1,0 +1,37 @@
+{
+	"name": "pipecast",
+	"properties": {
+		"activities": [
+			{
+				"name": "Data flow cast",
+				"type": "ExecuteDataFlow",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"dataflow": {
+						"referenceName": "dataflow4",
+						"type": "DataFlowReference"
+					},
+					"compute": {
+						"coreCount": 8,
+						"computeType": "General"
+					},
+					"traceLevel": "Fine"
+				}
+			}
+		],
+		"folder": {
+			"name": "Transformation"
+		},
+		"annotations": [],
+		"lastPublishTime": "2026-02-24T15:39:53Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

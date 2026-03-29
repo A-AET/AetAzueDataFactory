@@ -1,0 +1,69 @@
+{
+	"name": "009foreachactivity1",
+	"properties": {
+		"activities": [
+			{
+				"name": "ForEach1",
+				"type": "ForEach",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"items": {
+						"value": "@pipeline().parameters.Country",
+						"type": "Expression"
+					},
+					"isSequential": true,
+					"activities": [
+						{
+							"name": "Set variable1",
+							"type": "SetVariable",
+							"dependsOn": [],
+							"policy": {
+								"secureOutput": false,
+								"secureInput": false
+							},
+							"userProperties": [],
+							"typeProperties": {
+								"variableName": "Country",
+								"value": {
+									"value": "@item()",
+									"type": "Expression"
+								}
+							}
+						}
+					]
+				}
+			}
+		],
+		"parameters": {
+			"Number": {
+				"type": "array",
+				"defaultValue": [
+					1,
+					2,
+					3,
+					4
+				]
+			},
+			"Country": {
+				"type": "array",
+				"defaultValue": [
+					"Nigeria",
+					"UK",
+					"Indian"
+				]
+			}
+		},
+		"variables": {
+			"x": {
+				"type": "Integer"
+			},
+			"Country": {
+				"type": "String"
+			}
+		},
+		"annotations": [],
+		"lastPublishTime": "2026-02-01T19:25:05Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

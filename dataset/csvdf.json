@@ -1,0 +1,30 @@
+{
+	"name": "csvdf",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_ADF",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "FactCurrencyRate.csv",
+				"folderPath": "input",
+				"fileSystem": "aetcontainer"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "3|20101229|1|0.99980003999200195|2010-12-29 00:00:00",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

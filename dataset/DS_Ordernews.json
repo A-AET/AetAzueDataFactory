@@ -1,0 +1,43 @@
+{
+	"name": "DS_Ordernews",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_adlstosqldb",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "OrderDate",
+				"type": "date"
+			},
+			{
+				"name": "Productid",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "EnglishproductName",
+				"type": "varchar"
+			},
+			{
+				"name": "SalesAmount",
+				"type": "money",
+				"precision": 19,
+				"scale": 4
+			},
+			{
+				"name": "TaxAm",
+				"type": "money",
+				"precision": 19,
+				"scale": 4
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "tblordersnew"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
